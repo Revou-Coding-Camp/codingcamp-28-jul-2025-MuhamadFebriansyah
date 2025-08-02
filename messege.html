@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" >
+    <title>My Website</title>
+  </head>
+  <body>
+    <section class="message-section" aria-labelledby="msg-title" role="region">
+    <h2 id="msg-title">Message Us</h2>
+    <form class="message-form" id="messageForm" novalidate>
+      <label for="nameInput">Nama</label>
+      <input id="nameInput" type="text" name="name" placeholder="Nama" required aria-required="true" autocomplete="off" />
+      
+      <label for="dateInput">Tanggal Lahir</label>
+      <input id="dateInput" type="date" name="tanggalLahir" required aria-required="true" />
+
+      <label for="genderInput">Jenis Kelamin</label>
+      <select id="genderInput" name="jenisKelamin" required aria-required="true">
+        <option value="" disabled selected>Pilih Jenis Kelamin</option>
+        <option value="Laki - Laki">Laki - Laki</option>
+        <option value="Perempuan">Perempuan</option>
+      </select>
+
+      <label for="messageInput">Pesan</label>
+      <textarea id="messageInput" name="pesan" placeholder="Pesan" required aria-required="true"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+    <div class="info-box" aria-live="polite" id="displayInfo" tabindex="0" role="region" aria-label="Display of submitted message details and current time">
+      <strong>Current time :</strong> <span id="currentTime"></span><br />
+      <strong>Nama :</strong> <span id="displayName">-</span><br />
+      <strong>Tanggal Lahir :</strong> <span id="displayDate">-</span><br />
+      <strong>Jenis Kelamin :</strong> <span id="displayGender">-</span><br />
+      <strong>Pesan :</strong> <span id="displayMessage">-</span>
+    </div>
+  </section>
+  </body>
+</html>
